@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'product',
+  selector: 'product-component',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent  {
-
-  name: string="A1";
-  count: number=0;
-  image: string;
-  price:number=0;
+  @Input()
+  public product;
 
   increment(){
-    ++this.count;
+    ++this.product.count;
   }
 
   decrement(){
-    ++this.count;
+    if(this.product.count>0){
+    --this.product.count;
+    }
   }
 
 }

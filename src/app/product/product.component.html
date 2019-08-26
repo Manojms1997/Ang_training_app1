@@ -1,5 +1,9 @@
 <div class="productbox">
-    <div class="productname">{{name}}</div>    
-    <div class="productprice">{{price}}</div>
-    <div class="productcount">{{count}}</div>
+    <div class="productname">{{product.name}}</div>    
+    <div class="productprice">{{product.price}}</div>
+    <div class="productcount">
+        <button (click)="decrement()">-</button>
+        {{product.count}}
+        <button (click)="increment()">+</button>
+        </div>
 </div>
