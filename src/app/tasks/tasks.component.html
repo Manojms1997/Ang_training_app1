@@ -1,0 +1,9 @@
+<div *ngFor="let task of tasks">
+    <input type="text"/>
+    <input type="date"/>
+    <input type="date"/>
+    <button (click)="deleteTask(task)">Delete</button>
+</div>
+<button (click)="addTask()">
+    Add Task
+</button>
