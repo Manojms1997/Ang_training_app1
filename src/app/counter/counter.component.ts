@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-counter',
+  selector: 'counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.css']
 })
-export class CounterComponent implements OnInit {
+export class CounterComponent  {
 
-  constructor() { }
+ //Instance Data Members
+ count = 0;
 
-  ngOnInit() {
-  }
+
+ //Instance Methods
+ increment(/*this=receive reference of object*/){
+   ++this.count;
+ }
+
+ decrement(/*this=receive reference of object*/){
+   --this.count;
+ }
 
 }
